@@ -105,9 +105,9 @@ public class InfoDamage : BasePlugin
         {
             return _config.ShowDamage switch
             {
-                1 => $"[{victim}]\n{Core.Localizer["health"]}: {hp}",
-                2 => $"[{victim}]\n{Core.Localizer["armor"]}: {armor}",
-                3 => $"[{victim}]\n{Core.Localizer["damage"]}: {hp} | {Core.Localizer["armor"]}: {armor}",
+                1 => $"[{victim}]\n{Core.Localizer["health"]}: -{hp}",
+                2 => $"[{victim}]\n{Core.Localizer["armor"]}: -{armor}",
+                3 => $"[{victim}]\n{Core.Localizer["damage"]}: -{hp} | {Core.Localizer["armor"]}: -{armor}",
                 _ => ""
             };
         }
@@ -117,11 +117,12 @@ public class InfoDamage : BasePlugin
             {
                 1 => $"{Core.Localizer["health"]}: -{hp}",
                 2 => $"{Core.Localizer["armor"]}: -{armor}",
-                3 => $"{Core.Localizer["health"]}: -{hp} | {Core.Localizer["armor"]}: -{armor}",
+                3 => $"{Core.Localizer["damage"]}: -{hp} | {Core.Localizer["armor"]}: -{armor}",
                 _ => ""
             };
         }
-    }
+      }
+
 
     public override void Unload()
     {
