@@ -33,7 +33,7 @@ public class InfoDamage : BasePlugin
     {
         try
         {
-            const string fileName = "ConfigModel.jsonc";
+            const string fileName = "config.jsonc";
             const string section = "ConfigModel";
 
             // Load config
