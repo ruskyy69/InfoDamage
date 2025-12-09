@@ -12,7 +12,7 @@ namespace InfoDamage;
 
 [PluginMetadata(
     Id = "InfoDamage",
-    Version = "1.0.0",
+    Version = "1.0.1",
     Name = "Simple InfoDamage Alert",
     Author = "rusky",
     Description = "Simple InfoDamage using alerts"
@@ -129,3 +129,4 @@ public class InfoDamage : BasePlugin
         _logger.LogInformation("[InfoDamage] Plugin unloaded.");
     }
 }
+
