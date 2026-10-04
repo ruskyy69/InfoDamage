@@ -12,7 +12,7 @@ namespace InfoDamage;
 
 [PluginMetadata(
     Id = "InfoDamage",
-    Version = "1.0.1",
+    Version = "1.0.2",
     Name = "Simple InfoDamage Alert",
     Author = "rusky",
     Description = "Simple InfoDamage using alerts"
@@ -77,8 +77,8 @@ public class InfoDamage : BasePlugin
                 return HookResult.Continue;
 
             string victimName = victim?.Controller.PlayerName ?? "Unknown";
-            int dmgHealth = hurt.DmgHealth;
-            int dmgArmor  = hurt.DmgArmor;
+            int dmgHealth = hurt.ActualDmgHealth;
+	    int dmgArmor  = hurt.ActualDmgArmor;
 
             // Permission check
             if (!string.IsNullOrWhiteSpace(_config.Permissions))
